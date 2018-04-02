@@ -135,6 +135,9 @@ public class CommentListFragment extends BaseFragment implements CommentListCont
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) mRootView.findViewById(R.id.swipe_refresh_layout);
         mSwipeRefreshLayout.setRefreshing(false);
+        // Calling SwipeRefreshLayout.setEnabled(false) disables the gesture, but still allows you to show the
+        // refreshing animation programmatically with setRefreshing(true)
+        mSwipeRefreshLayout.setEnabled(false);
 
         mNewsItem = getArguments().getParcelable(Constants.KEY_ARGS_ARTICLE);
 

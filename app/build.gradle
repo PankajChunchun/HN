@@ -28,22 +28,8 @@ android {
     }
 }
 
-// Force support libraries to use same version in dependencies.
-/*configurations.all {
-    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-        def requested = details.requested
-        if (requested.group == 'com.android.support') {
-            if (!requested.name.startsWith("multidex")) {
-                details.useVersion '25.3.1'
-            }
-        }
-    }
-}*/
-
 dependencies {
     compile project(":dataprovider")
-
-    //compile 'com.wefika:flowlayout:0.4.1'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:26.1.0'
@@ -63,13 +49,8 @@ dependencies {
     compile 'com.google.dagger:dagger:2.15'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.15'
 
-    // ViewModel and LiveData
-     compile 'android.arch.lifecycle:extensions:1.1.1'
-     annotationProcessor 'android.arch.lifecycle:compiler:1.1.1'
-    //for lifecycle and LiveData and ViewModel
-//    compile 'android.arch.lifecycle:runtime:1.0.0-alpha1'
-//    compile 'android.arch.lifecycle:extensions:1.0.0-alpha1'
-//    annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha1"
+    compile 'android.arch.lifecycle:extensions:1.1.1'
+    annotationProcessor 'android.arch.lifecycle:compiler:1.1.1'
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.10.19'

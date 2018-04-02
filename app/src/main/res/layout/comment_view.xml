@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/list_row_vertical_margin"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/upvote_content_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@+id/writer_info_container"
+            android:background="@drawable/ic_arrow_drop_up"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/added_by_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/upvote_content_btn"
+            android:textColor="@color/colorSubInfo"
+            android:textSize="12sp"
+            tools:text="Added by" />
+
+        <TextView
+            android:id="@+id/when_added_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/content_count_and_expanded_tv"
+            android:layout_toRightOf="@+id/added_by_tv"
+            android:textColor="@color/colorSubInfo"
+            android:textSize="12sp"
+            tools:text="5 days ago" />
+
+        <TextView
+            android:id="@+id/content_count_and_expanded_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="@string/comment_header_expanded"
+            android:textColor="@color/colorSubInfo"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/writer_info_container"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/upvote_content_btn"
+        android:textColor="@color/colorInfo"
+        android:textSize="14sp"
+        tools:text="sub details section sdhjfdwhgfhjdsgfhghfgafakfffssfsfasffafasfasfsafafaffsafsafasf" />
+
+</LinearLayout>

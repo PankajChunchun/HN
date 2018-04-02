@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="@dimen/list_row_vertical_margin"
+    android:layout_marginRight="@dimen/list_row_vertical_margin"
+    android:layout_marginTop="2dp"
+    android:background="@drawable/shadow_background"
+    android:padding="@dimen/list_row_vertical_margin">
+
+    <TextView
+        android:id="@+id/news_row_id_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/colorSubInfo"
+        android:textSize="14sp"
+        android:gravity="right"
+        tools:text="000." />
+
+    <ImageButton
+        android:id="@+id/upvote_news_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/news_row_id_tv"
+        android:background="@drawable/ic_arrow_drop_up"
+        android:padding="5dp" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/news_title_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/upvote_news_btn"
+        app:flexWrap="wrap">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorInfo"
+            android:textSize="14sp"
+            app:layout_alignSelf="flex_start"
+            tools:text="News Title this is a long long long long long long long news title" />
+
+        <TextView
+            android:id="@+id/added_by_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSubInfo"
+            android:textSize="13sp"
+            app:layout_alignSelf="flex_start"
+            tools:text="(added by)" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <TextView
+        android:id="@+id/sub_details_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/news_title_container"
+        android:layout_toRightOf="@+id/upvote_news_btn"
+        android:textColor="@color/colorSubInfo"
+        android:textSize="12sp"
+        tools:text="sub details section" />
+
+</RelativeLayout>

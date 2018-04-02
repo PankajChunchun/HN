@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">HackersNews</string>
+
+    <string name="news_row_identifier">%1$d.</string>
+    <string name="news_added_by">(%1$s)</string>
+    <string name="news_sub_details">%1$d points by %2$s %3$s | %4$d comments</string>
+    <string name="info_empty_news_list">No NEWS found</string>
+
+    <string name="what_went_wrong">What went wrong</string>
+    <string name="tap_to_reload">Tap to reload</string>
+    <string name="error_msg_unknown">An unexpected error occurred</string>
+    <string name="internet_con_err_msg">Internet Connection Required</string>
+
+    <string name="comment_header_count">[%1$d]</string>
+    <string name="comment_header_expanded">[-]</string>
+
+    <string name="top_bar_header_text">Hackers News</string>
+    <string name="top_bar_subheader_text">New | Comments | Apply | Show | Ask | Job | Submit</string>
+    <string name="top_bar_login_text">Login</string>
+</resources>

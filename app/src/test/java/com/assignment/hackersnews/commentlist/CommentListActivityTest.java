@@ -46,15 +46,6 @@ public class CommentListActivityTest {
     }
 
     @Test
-    public void showTest() {
-        CommentListActivity.show(ShadowApplication.getInstance().getApplicationContext(),
-                new NewsItem());
-        Intent startedIntent = Shadows.shadowOf(activity).getNextStartedActivity();
-        ShadowIntent shadowIntent = Shadows.shadowOf(startedIntent);
-        Assert.assertEquals(CommentListActivity.class, shadowIntent.getIntentClass());
-    }
-
-    @Test
     public void shouldNotBeNull() {
         junit.framework.Assert.assertNotNull(activity);
     }
